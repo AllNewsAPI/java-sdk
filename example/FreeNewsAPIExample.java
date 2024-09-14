@@ -1,12 +1,12 @@
-import com.freenewsapi.NewsAPI;
-import com.freenewsapi.NewsAPIException;
+import com.allnewsapi.NewsAPI;
+import com.allnewsapi.NewsAPIException;
 
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FreeNewsAPIExample {
+public class AllNewsAPIExample {
     public static void main(String[] args) {
         // Replace with your actual API key
         String apiKey = "your_api_key_here";

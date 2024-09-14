@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.freenewsapi</groupId>
-    <artifactId>freenewsapi-java-sdk</artifactId>
+    <groupId>com.allnewsapi</groupId>
+    <artifactId>allnewsapi-java-sdk</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>FreeNewsAPI Java SDK</name>
-    <description>A Java SDK for the FreeNewsAPI service</description>
-    <url>https://github.com/FreeNews-API/java-sdk</url>
+    <name>AllNewsAPI Java SDK</name>
+    <description>A Java SDK for the AllNewsAPI service</description>
+    <url>https://github.com/AllNewsAPI/java-sdk</url>
 
     <licenses>
         <license>
@@ -23,17 +23,17 @@
 
     <developers>
         <developer>
-            <name>FreeNewsAPI</name>
-            <email>contact@freenewsapi.com</email>
-            <organization>FreeNewsAPI</organization>
-            <organizationUrl>https://freenewsapi.com</organizationUrl>
+            <name>AllNewsAPI</name>
+            <email>contact@allnewsapi.com</email>
+            <organization>AllNewsAPI</organization>
+            <organizationUrl>https://allnewsapi.com</organizationUrl>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/FreeNews-API/java-sdk.git</connection>
-        <developerConnection>scm:git:ssh://github.com:FreeNews-API/java-sdk.git</developerConnection>
-        <url>https://github.com/FreeNews-API/java-sdk/tree/main</url>
+        <connection>scm:git:git://github.com/AllNewsAPI/java-sdk.git</connection>
+        <developerConnection>scm:git:ssh://github.com:AllNewsAPI/java-sdk.git</developerConnection>
+        <url>https://github.com/AllNewsAPI/java-sdk/tree/main</url>
     </scm>
 
     <properties>

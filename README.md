@@ -1,9 +1,9 @@
  
-# FreeNewsAPI Java SDK
+# AllNewsAPI Java SDK
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-The official **FreeNewsAPI SDK** for the Java programming language. 
+The official **AllNewsAPI SDK** for the Java programming language. 
 
 Easily access real-time and historical news articles and headlines from multiple sources around the world. 
 
@@ -26,8 +26,8 @@ Easily access real-time and historical news articles and headlines from multiple
 
 ```xml
 <dependency>
-  <groupId>com.freenewsapi</groupId>
-  <artifactId>freenewsapi-java-sdk</artifactId>
+  <groupId>com.allnewsapi</groupId>
+  <artifactId>allnewsapi-java-sdk</artifactId>
   <version>1.0.0</version>
 </dependency>
 ```
@@ -35,20 +35,20 @@ Easily access real-time and historical news articles and headlines from multiple
 ### Gradle
 
 ```groovy
-implementation 'com.freenewsapi:freenewsapi-java-sdk:1.0.0'
+implementation 'com.allnewsapi:allnewsapi-java-sdk:1.0.0'
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-> 📌 **Note:** You need an API key to use this SDK. [Sign up here](https://freenewsapi.com/signup) to get one for free.
+> 📌 **Note:** You need an API key to use this SDK. [Sign up here](https://allnewsapi.com/signup) to get one for free.
 
 ### 🔹 Basic Search
 
 ```java
-import com.freenewsapi.NewsAPI;
-import com.freenewsapi.NewsAPIException;
+import com.allnewsapi.NewsAPI;
+import com.allnewsapi.NewsAPIException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -75,11 +75,43 @@ public class Example {
 
 ---
 
+### 🔹 Headlines
+
+```java
+import com.allnewsapi.NewsAPI;
+import com.allnewsapi.NewsAPIException;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HeadlinesExample {
+    public static void main(String[] args) {
+        String apiKey = "your_api_key_here";
+
+        try {
+            NewsAPI newsAPI = new NewsAPI(apiKey);
+
+            Map<String, Object> options = new HashMap<>();
+            options.put("lang", "en");
+            options.put("country", "us");
+
+            String results = newsAPI.headlines(options);
+            System.out.println(results);
+
+        } catch (NewsAPIException e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+    }
+}
+```
+
+---
+
 ### 🔹 Advanced Search
 
 ```java
-import com.freenewsapi.NewsAPI;
-import com.freenewsapi.NewsAPIException;
+import com.allnewsapi.NewsAPI;
+import com.allnewsapi.NewsAPIException;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -134,14 +166,35 @@ public class AdvancedExample {
 | `publisher`   | `String` or `List<String>` | Filter by news source(s)                              |
 | `format`      | `String`              | Response format: `json`, `csv`, `xlsx`                       |
 
- 
+---
+
+## 📰 Headlines Method
+
+The `headlines()` method provides access to the latest news headlines. It accepts the same parameters as the `search()` method and returns results in the same format.
+
+### Usage
+
+```java
+// Get headlines for a specific country
+Map<String, Object> options = new HashMap<>();
+options.put("country", "us");
+options.put("lang", "en");
+String headlines = newsAPI.headlines(options);
+
+// Get headlines by category
+options.put("category", "technology");
+String techHeadlines = newsAPI.headlines(options);
+```
+
+The headlines endpoint supports all the same parameters listed in the "Available Search Parameters" table above.
+
 ---
 
 ## 📚 Documentation & Links
 
-- [🌐 FreeNewsAPI Documentation](https://freenewsapi.com/documentation)
-- [🐛 Report Issues](https://github.com/FreeNews-API/java-sdk/issues)
-- [⭐ Star the SDK on GitHub](https://github.com/FreeNews-API/java-sdk)
+- [🌐 AllNewsAPI Documentation](https://allnewsapi.com/docs)
+- [🐛 Report Issues](https://github.com/AllNewsAPI/java-sdk/issues)
+- [⭐ Star the SDK on GitHub](https://github.com/AllNewsAPI/java-sdk)
 
 ---
 
